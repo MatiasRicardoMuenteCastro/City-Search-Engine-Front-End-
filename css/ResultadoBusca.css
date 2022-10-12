@@ -1,0 +1,88 @@
+body {
+  background-color: rgb(21,21,21);
+  color: #6f96ff;
+  padding: 0;
+
+            margin: 0;
+}
+
+h1.titulo{
+	color: rgb(111,150,255);
+	font-size: 20px;
+	left: 10px;
+}
+
+.nome{
+	position: absolute;
+	left: 60px;
+	top: 0px;
+	z-index: -1;
+}
+
+ul{
+  list-style-type: none;
+  overflow: hidden;
+}
+
+li{
+  float:left;
+}
+
+li a {
+  
+  text-align: center;
+  padding: 14px 110px;
+  text-decoration: none;
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+
+
+
+nav{
+	position: absolute;
+	left: 300px;
+	top: 5px;
+	z-index: -1;
+	height: 10px;
+}
+
+li a:hover {
+  color: rgb(111,150,255);
+}
+
+#imgCidadeError,#populationError, #climaError, #eventoError{
+  color: #4d0000;
+  display: inline;
+}
+
+#imgCidade{
+  height: 25%;
+  width: 25%;
+}
+
+hr.linha {
+  border: 1px solid;
+  color: #9fafc1;
+  top: 60px;
+  position: relative;
+}
+
+hr.linha4 {
+  border: 1px solid;
+  color: #9fafc1;
+  top: 700px;
+  position: relative;
+}
+
+footer{
+	position: absolute;
+	top: 730px;
+	left: 250px;
+	right: 250px;
+}
+
+p.copia{
+	text-align: center; 
+	color: #9fafc1;
+}

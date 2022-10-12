@@ -1,0 +1,181 @@
+body {
+  background-color: rgb(21,21,21);
+  color: #6f96ff;
+  padding: 0;
+  margin: 0;
+}
+
+h1.titulo{
+	color: rgb(111,150,255);
+	font-size: 20px;
+	left: 10px;
+}
+
+.nome{
+	position: absolute;
+	left: 60px;
+	top: 0px;
+	z-index: -1;
+}
+
+ul{
+  list-style-type: none;
+  overflow: hidden;
+}
+
+li{
+  float:left;
+}
+
+li a {
+  
+  text-align: center;
+  padding: 14px 110px;
+  text-decoration: none;
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+
+nav{
+	position: absolute;
+	left: 300px;
+	top: 5px;
+	z-index: -1;
+	height: 10px;
+	background-color: rgb(21,21,21);
+}
+
+li a:hover {
+  color: rgb(111,150,255);
+}
+
+hr.linha {
+  border: 1px solid;
+  color: #9fafc1;
+  top: 60px;
+  position: relative;
+
+}
+
+.conteudo{
+	position: relative;
+	top: 5px;
+}
+
+.retour{
+	position: absolute;
+	top: 130px;
+	left: 450px;
+	right:500px;
+	
+}
+
+h1.foco{
+	color: #6f96ff;
+	text-align: center;
+	font-weight: 100px bold;
+}
+
+input {
+  width: 100%;
+  color: #6f96ff;
+  background-color: rgb(21,21,21);
+}
+
+.cont1{
+	position: relative;
+	top: 390px;
+	left: 80px;
+	float: left;
+}
+
+.opcoes{
+	background-color: #5c65c0;
+	color: #ffffff;
+	padding: 20px 30px;
+	text-align: left;
+	font-family: 'Bai Jamjuree';
+}
+
+.cont2{
+	position: absolute;
+	top: 383px;
+	left: 290px;
+	float: right;
+}
+
+#error{
+	position: relative;
+	bottom: 90px;
+	color: #7a1118;
+	display: inline;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 20px 320px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid;
+  color: #5c65c0;
+}
+
+ ::placeholder,::-webkit-input-placeholder {
+    color: #6f96ff;
+  }
+  :-ms-input-placeholder {
+     color: #6f96ff;
+  }
+
+.cont3{
+	position: absolute;
+	top: 391px;
+	left: 1101px;
+	float: left;
+	background-color: #5c65c0;
+	padding: 11px 1px;
+	width: 70px;
+}
+
+.botao{
+	width: 44%;
+	background-color: #5c65c0;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.explica{
+	top: 480px;
+	position: absolute;
+	left: 250px;
+	font-size: 30px;
+}
+
+.explicacao{
+	color: #ffffff;
+	top: 550px;
+	left: 200px;
+	position: absolute;
+	font-size: 17px;
+}
+
+hr.linha2 {
+  border: 1px solid;
+  color: #9fafc1;
+  position: relative;
+}
+
+footer{
+	position: absolute;
+	top: 750px;
+	left: 0px;
+	right: 0px;
+
+}
+
+p.copia{
+	text-align: center; 
+	color: #9fafc1;
+	left: 250px;
+	right: 250px;
+}

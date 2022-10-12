@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<link rel="stylesheet" href="./css/Home.css">
+		<link href='https://fonts.googleapis.com/css?family=MuseoModerno' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+		<link rel="shortcut icon" type="image/x-icon" href="./img/icon.ico" />
+		<style>
+			h1.titulo{
+				font-family: 'MuseoModerno';font-size: 22px;
+			}
+			h1.foco{
+				font-family: 'MuseoModerno';font-size: 110px;
+			}
+			body{
+				font-family: 'Bai Jamjuree'
+			}
+		</style>
+		<title> Página Inicial </title>
+		<div class="nome">
+			<h1 class="titulo"> RETOUR </h1>
+		</div>
+	</head>
+	<nav>
+		<ul>
+			<li><a href="./index.html"> Página Inicial</a></li>
+			<li><a href="./html/Sobre.html"> Sobre Nós </a></li>
+		</ul>
+	</nav>
+		
+	<body>
+	<hr class="linha">
+		<div class="conteudo">
+			<div class="retour"> 
+				<h1 class="foco"> RETOUR </h1>
+			</div>
+				<div class="cont1">
+					 <select id = "opc" class ="opcoes" name="estados">
+							<option value=""> Selecione o Estado </option>
+							<option value="AC">AC</option>
+							<option value="AL">AL</option>
+							<option value="AP">AP</option>
+							<option value="AM">AM</option>
+							<option value="BA">BA</option>
+							<option value="CE">CE</option>
+							<option value="DF">DF</option>
+							<option value="ES">ES</option>
+							<option value="GO">GO</option>
+							<option value="MA">MA</option>
+							<option value="MT">MT</option>
+							<option value="MS">MS</option>
+							<option value="MG">MG</option>
+							<option value="PA">PA</option>
+							<option value="PB">PB</option>
+							<option value="PR">PR</option>
+							<option value="PE">PE</option>
+							<option value="PI">PI</option>
+							<option value="RJ">RJ</option>
+							<option value="RN">RN</option>
+							<option value="RS">RS</option>
+							<option value="RO">RO</option>
+							<option value="RR">RR</option>
+							<option value="SC">SC</option>
+							<option value="SP">SP</option>
+							<option value="SE">SE</option>
+							<option value="TO">TO</option>
+					</select>
+				</div>
+				<div class="cont2">
+					<input id = "userInput" type="text" name="cidade" placeholder="Pesquise a cidade..." autofocus>
+					<p id = "error"></p>
+				</div>
+				<div class="cont3">
+					<input type="image" src="./img/lupa1.png" class="botao" value="Enviar" onclick = "requestSearch()">
+				</div>	
+		<h3 class="explica"> Deseja obter informações sobre qualquer cidade do Brasil? </h3>
+		<p class="explicacao"> Retour serve para isso. Selecione o Estado e, na barra de pesquisa, insira o nome da cidade que deseja descobrir mais. </p>
+		</div>
+		<script src = "./JavaScript/index.js"></script>
+	</body>
+	<footer>
+		<hr class="linha2">
+		<p class="copia"> © Copyright 2022 </p>
+	</footer>
+			
+</html>

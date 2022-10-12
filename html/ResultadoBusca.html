@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/ResultadoBusca.css">
+		<link href='https://fonts.googleapis.com/css?family=MuseoModerno' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/icon.ico" />
+		<style>
+			h1.titulo{
+				font-family: 'MuseoModerno';font-size: 22px;
+			}
+			h1.foco{
+				font-family: 'MuseoModerno';font-size: 110px;
+			}
+			body{
+				font-family: 'Bai Jamjuree'
+			}
+		</style>
+		<title> Página Inicial </title>
+		<div class="nome">
+			<h1 class="titulo"> RETOUR </h1>
+		</div>
+	</head>
+	<nav>
+		<ul>
+			<li><a href="../index.html"> Página Inicial</a></li>
+			<li><a href="../html/Sobre.html"> Sobre Nós </a></li>
+		</ul>
+	</nav>
+	
+	
+	<body>
+		<div class = "imageBox">
+			<p id = "imgCidadeError"></p> <!-- Se der algum erro no carregamento da imagem, ele vai mostrar aqui, posiciona esse p em um lugar dahora ai junto com a imagem -->
+			<img id = "imgCidade" src = "">
+		</div>
+		<div class = "populationBox">
+			<p id = "populationError"></p>
+			<label>
+				Número de habitantes
+				<p id = "population"></p>
+			</label>
+		</div>
+		<div class = "climaBox">
+			<label>
+			Clima:
+			<p id = "climaError"></p>
+			<img id = "imgClima"></img>
+			<ul id = "climaList">
+			<ul>
+			</label>
+		</div>
+
+		<div class = "eventoBox">
+			<p>Lista de eventos</p>
+			<p id = "eventoError"></p>
+			<ul id = "eventsList">
+			</ul>
+			<a href = "" id = "Mais_Eventos">Mais Eventos</a>
+		</div>
+
+		<div class = "segurançaBox">
+			<p id = "segurancaError"></p>
+		</div>
+
+		<hr class="linha">
+		<hr class="linha4">
+		<script src = "../JavaScript/Busca.js"></script>
+	</body>
+	<footer>
+		<p class="copia"> © Copyright 2022 </p>
+	</footer>
+			
+</html>
