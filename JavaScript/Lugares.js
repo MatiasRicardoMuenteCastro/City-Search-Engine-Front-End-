@@ -1,0 +1,17 @@
+const places = localStorage.getItem("places")
+const placesObj = JSON.parse(places)
+for (place of placesObj){
+    console.log("Foto: ",place.thumbnail)
+    console.log("Tipo do Estabelecimento: ",place.type)
+    console.log("Recomendação Nº: ",place.position)
+    console.log("Nome: ",place.title)
+    console.log("Endereço: ",place.address)
+    console.log("Descrição: ",place.description)
+    console.log("Está aberto?\n",place.open_state)
+    console.log("Telefone: ",place.phone)
+    console.log("Nota: ",place.rating)
+    console.log("Avaliações: ",place.reviews)
+    console.log("lat: ",place.gps_coordinates.latitude)
+    console.log("longitude: ",place.gps_coordinates.longitude)
+    console.log("\n\n\n")
+}

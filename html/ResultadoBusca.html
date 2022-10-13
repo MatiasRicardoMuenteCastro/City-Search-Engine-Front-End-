@@ -36,20 +36,16 @@
 			<img id = "imgCidade" src = "">
 		</div>
 		<div class = "populationBox">
+			<p>Número de habitantes da cidade</p>
 			<p id = "populationError"></p>
-			<label>
-				Número de habitantes
-				<p id = "population"></p>
-			</label>
+			<p id = "population"></p>
 		</div>
 		<div class = "climaBox">
-			<label>
-			Clima:
+			<p>Clima:</p>
 			<p id = "climaError"></p>
 			<img id = "imgClima"></img>
 			<ul id = "climaList">
 			<ul>
-			</label>
 		</div>
 
 		<div class = "eventoBox">
@@ -57,11 +53,14 @@
 			<p id = "eventoError"></p>
 			<ul id = "eventsList">
 			</ul>
-			<a href = "" id = "Mais_Eventos">Mais Eventos</a>
 		</div>
 
-		<div class = "segurançaBox">
-			<p id = "segurancaError"></p>
+		<div class = "localBox">
+			<p>Encontre lugares pela da cidade: </p>
+			<p id = "errorCampoPlace"></p>
+			<input type = "text" id = "txtPlaces" placeholder="Ex: (Restaurantes, Shoppings e Museus)"></input><button id = "btn" onclick="getPlaces()">Procurar</button>
+			<ul id = "placesList">
+			</ul>
 		</div>
 
 		<hr class="linha">
