@@ -46,6 +46,7 @@ nav{
 
 li a:hover {
   color: rgb(111,150,255);
+  transition: linear 0.25s background-color;
 }
 
 hr.linha {

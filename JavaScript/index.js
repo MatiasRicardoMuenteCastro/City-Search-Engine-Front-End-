@@ -11,7 +11,7 @@ async function requestSearch(){
 
     if (formatacaoErro === false){
         if (UF === ""){
-            erroSTRUF = "Digite algo no campo da UF"
+            erroSTRUF = "Selecione algo no campo do estado"
             formatacaoErro = true
          }
         if (cidade === ""){
@@ -51,7 +51,6 @@ async function requestSearch(){
         if (erroSTRUF !== ""){
             //Exibição do erro de formatação para o usuário
             document.getElementById("userInput").style.color = "#5c65c0"
-            document.getElementById("opc").style.backgroundColor = "#b30000" //Cor de erro da caixa
             document.getElementById("opc").style.color = "black"
             document.getElementById("error").innerHTML = erroSTRUF
         }

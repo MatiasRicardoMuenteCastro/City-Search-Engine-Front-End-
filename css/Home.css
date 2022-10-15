@@ -47,6 +47,7 @@ nav{
 
 li a:hover {
   color: rgb(111,150,255);
+  transition: linear 0.25s color;
 }
 
 hr.linha {
@@ -97,6 +98,11 @@ input {
 	font-family: 'Bai Jamjuree';
 }
 
+.opcoes:hover{
+	transition: linear 0.25s background-color;
+	background-color: #515ab8b6;
+}
+
 .cont2{
 	position: absolute;
 	top: 383px;
@@ -132,18 +138,22 @@ input[type=text] {
 	top: 391px;
 	left: 1101px;
 	float: left;
-	background-color: #5c65c0;
-	padding: 11px 1px;
 	width: 70px;
 }
 
 .botao{
-	width: 44%;
+	width: 70px;
 	background-color: #5c65c0;
-	margin-left: 15px;
+	height: 47.5px;
 	cursor: pointer;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 0px;
 }
-
+.botao:hover{
+	transition: linear 0.25s background-color;
+	background-color: #515ab8b6;
+}
 .explica{
 	top: 480px;
 	position: absolute;

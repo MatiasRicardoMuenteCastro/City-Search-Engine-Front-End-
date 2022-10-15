@@ -1,17 +1,18 @@
 const places = localStorage.getItem("places")
 const placesObj = JSON.parse(places)
+
+document.getElementById("ulPlacesID").innerHTML = ""
+
 for (place of placesObj){
-    console.log("Foto: ",place.thumbnail)
-    console.log("Tipo do Estabelecimento: ",place.type)
-    console.log("Recomendação Nº: ",place.position)
-    console.log("Nome: ",place.title)
-    console.log("Endereço: ",place.address)
-    console.log("Descrição: ",place.description)
-    console.log("Está aberto?\n",place.open_state)
-    console.log("Telefone: ",place.phone)
-    console.log("Nota: ",place.rating)
-    console.log("Avaliações: ",place.reviews)
-    console.log("lat: ",place.gps_coordinates.latitude)
-    console.log("longitude: ",place.gps_coordinates.longitude)
-    console.log("\n\n\n")
+    document.getElementById("ulPlacesID").innerHTML += `<li><img src = "${place.thumbnail}"></li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Tipo do Estabelecimento: ${place.type}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Recomendação Nº: ${place.position}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Nome: ${place.title}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Endereço: ${place.address}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Descrição: ${place.description}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Está aberto?<br>${place.open_state}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Telefone: ${place.phone}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Nota: ${place.rating}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li>Avaliações: ${place.reviews}</li>`
+    document.getElementById("ulPlacesID").innerHTML += `<li><a href ="${place.website}" target = "__blank">Site</a></li>`
 }
