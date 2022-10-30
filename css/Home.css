@@ -1,191 +1,177 @@
-body {
-  background-color: rgb(21,21,21);
-  color: #6f96ff;
-  padding: 0;
-  margin: 0;
+.botao{
+	background-color: #5c65c0;
+	height: 60px;
+	width: 85px;
+	cursor: pointer;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 0px;
+	position: relative;
+	top: 3px;
+	border: 0px;
+}
+.conteudo #row1 .col-md-12{
+	text-align: center;
 }
 
+.conteudo{
+	position: relative;
+	top: 150px;
+}
+.conteudo #row2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nome{
+	position: relative;
+	top: 25px;
+	left: 2.5%;
+}
+#linav{
+	text-align: center;
+	position: relative;
+	top: -8px;
+	left: 20%;
+	bottom: 35px;
+	width: 35vh;
+}
+body {
+	background-color: rgb(21,21,21);
+	color: #6f96ff;
+	padding: 0;
+	margin: 0;
+}
 h1.titulo{
 	color: rgb(111,150,255);
 	font-size: 20px;
 	left: 10px;
 }
-
-.nome{
-	position: absolute;
-	left: 60px;
-	top: 0px;
-	z-index: -1;
-}
-
 ul{
-  list-style-type: none;
-  overflow: hidden;
+	list-style-type: none;
+	overflow: hidden;
 }
-
 li{
-  float:left;
+	float:left;
+	padding-left: 10%;
 }
-
 li a {
-  
-  text-align: center;
-  padding: 14px 110px;
-  text-decoration: none;
-  color: rgb(255,255,255);
-  font-weight: bold;
+	text-decoration: none !important;
+	color: rgb(255,255,255);
+	font-weight: bold !important;
 }
-
-nav{
-	position: absolute;
-	left: 300px;
-	top: 5px;
-	z-index: -1;
-	height: 10px;
+li a:hover {
+	color: rgb(111,150,255);
+	transition: linear 0.25s color !important;
+}
+hr.linha {
+	border: 1px solid;
+	color: #9fafc1;
+	top: 10%;
+	position: relative;
+}
+input {
+	color: #6f96ff;
 	background-color: rgb(21,21,21);
 }
-
-li a:hover {
-  color: rgb(111,150,255);
-  transition: linear 0.25s color;
-}
-
-hr.linha {
-  border: 1px solid;
-  color: #9fafc1;
-  top: 60px;
-  position: relative;
-
-}
-
-.conteudo{
-	position: relative;
-	top: 5px;
-}
-
-.retour{
-	position: absolute;
-	top: 130px;
-	left: 450px;
-	right:500px;
-	
-}
-
-h1.foco{
-	color: #6f96ff;
-	text-align: center;
-	font-weight: 100px bold;
-}
-
-input {
-  width: 100%;
-  color: #6f96ff;
-  background-color: rgb(21,21,21);
-}
-
 .cont1{
 	position: relative;
-	top: 390px;
-	left: 80px;
-	float: left;
+	bottom:8px;
 }
-
 .opcoes{
 	background-color: #5c65c0;
 	color: #ffffff;
-	padding: 20px 30px;
+	width: 24vh;
 	text-align: left;
 	font-family: 'Bai Jamjuree';
 }
-
 .opcoes:hover{
 	transition: linear 0.25s background-color;
 	background-color: #515ab8b6;
 }
 
-.cont2{
-	position: absolute;
-	top: 383px;
-	left: 290px;
-	float: right;
-}
-
-#error{
-	position: relative;
-	bottom: 90px;
-	color: #7a1118;
-	display: inline;
-}
-
 input[type=text] {
-  width: 100%;
-  padding: 20px 320px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid;
-  color: #5c65c0;
+	width: 40vh;
+	height: 60px;
+	border: 1px solid;
+	color: #5c65c0;
+	text-align: left;
+}
+::placeholder,::-webkit-input-placeholder {
+	color: #6f96ff;
+	text-align: left;
 }
 
- ::placeholder,::-webkit-input-placeholder {
-    color: #6f96ff;
-  }
-  :-ms-input-placeholder {
-     color: #6f96ff;
-  }
-
-.cont3{
-	position: absolute;
-	top: 391px;
-	left: 1101px;
-	float: left;
-	width: 70px;
-}
-
-.botao{
-	width: 70px;
-	background-color: #5c65c0;
-	height: 47.5px;
-	cursor: pointer;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	border: 0px;
-}
 .botao:hover{
 	transition: linear 0.25s background-color;
 	background-color: #515ab8b6;
 }
 .explica{
-	top: 480px;
-	position: absolute;
-	left: 250px;
 	font-size: 30px;
+	text-align: left;
 }
-
+#row3{
+	position: relative;
+	top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.explica{
+	font-size: 30px;
+	position: relative;
+}
 .explicacao{
 	color: #ffffff;
-	top: 550px;
-	left: 200px;
-	position: absolute;
 	font-size: 17px;
 }
-
 hr.linha2 {
-  border: 1px solid;
-  color: #9fafc1;
-  position: relative;
+	border: 1px solid;
+	color: #9fafc1;
+	position: relative;
 }
-
 footer{
 	position: absolute;
-	top: 750px;
+	top: 850px;
 	left: 0px;
 	right: 0px;
-
 }
-
 p.copia{
 	text-align: center; 
 	color: #9fafc1;
 	left: 250px;
 	right: 250px;
+}
+
+.opcoes{
+	background-color: #5c65c0;
+	color: #ffffff;
+	height: 60px;
+	width: 170px;
+	text-align: left;
+	font-family: 'Bai Jamjuree';
+}
+.opcoes:hover{
+	transition: linear 0.25s background-color;
+	background-color: #515ab8b6;
+}
+#error{
+	color: white;
+	height: 60px;
+	width: 250px;
+	background-color: #5c65c0;
+	left: 10px;
+	text-align: center;
+	position: fixed;
+	visibility: hidden;
+	border: 0px;
+	top: 190px;
+}
+input[type=text] {
+	border: 1px solid;
+	color: #5c65c0;
+	text-align: left;
+}
+footer{
+	text-align: center;
 }

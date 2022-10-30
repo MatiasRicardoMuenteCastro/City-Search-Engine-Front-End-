@@ -1,0 +1,106 @@
+body {
+  background-color: rgb(21,21,21);
+  color: rgb(255,255,255);
+  padding: 0;
+  margin: 0;
+}
+.nome{
+  position: relative;
+  top: 25px;
+  left: 2.5%;
+}
+#linav{
+  text-align: center;
+  position: relative;
+  top: -8px;
+  left: 20%;
+  bottom: 35px;
+  width: 35vh;
+}
+h1.titulo{
+  color: rgb(111,150,255);
+  font-size: 20px;
+  left: 10px;
+}
+#linav ul{
+  list-style-type: none;
+  overflow: hidden;
+}
+#linav ul li{
+  float:left;
+  padding-left: 10%;
+}
+#linav ul li a {
+  text-decoration: none !important;
+  color: rgb(255,255,255);
+  font-weight: bold !important;
+}
+#linav ul li a:hover {
+  color: rgb(111,150,255);
+  transition: linear 0.25s color !important;
+}
+hr.linha {
+  border: 1px solid;
+  color: #9fafc1;
+  position: relative;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul li a{
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+ul li a:hover{
+  transition: linear 0.25s color;
+}
+.listaLugaresClasseTitulo{
+  text-align: center;
+  color: #b161f4;
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  float: left;
+  margin-left: 25px;
+}
+.listaLugaresClasseImg{
+  max-width: 150px;
+  max-height: 150px;
+  position: relative;
+  margin-left: 50px;
+  margin-right: 6vh;
+  margin-top: 10px;
+}
+.listaLugaresClasse{
+  position: relative;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.listaLugaresClasseLink{
+  position: relative;
+  float: left;
+  margin-top: 15px;
+  margin-left: 25vw;
+  font-size: 18px;
+}
+
+.linksite{
+  color: #6f96ff;
+}
+.linksite:hover{
+  color:#b161f4; 
+  font-weight: bold;
+}
+hr.linha5 {
+  border: 1px solid;
+  color: #9fafc1;
+  position: relative;
+  margin-top: 30px;
+}
+p.copia{
+  text-align: center; 
+  color: #9fafc1;
+}

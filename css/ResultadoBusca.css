@@ -2,96 +2,210 @@ body {
   background-color: rgb(21,21,21);
   color: #6f96ff;
   padding: 0;
-
-            margin: 0;
+  margin: 0;
 }
-
+#linav{
+  text-align: center;
+  position: relative;
+  top: -8px;
+  left: 20%;
+  bottom: 35px;
+  width: 35vh;
+}
 h1.titulo{
-	color: rgb(111,150,255);
-	font-size: 20px;
-	left: 10px;
+  color: rgb(111,150,255);
+  left: 10px;
+  position: relative;
+  top: 25px;
 }
-
-.nome{
-	position: absolute;
-	left: 60px;
-	top: 0px;
-	z-index: -1;
-}
-
 ul{
   list-style-type: none;
   overflow: hidden;
 }
-
 li{
   float:left;
+  padding-left: 10%;
 }
-
 li a {
-  
-  text-align: center;
-  padding: 14px 110px;
-  text-decoration: none;
+  text-decoration: none !important;
   color: rgb(255,255,255);
-  font-weight: bold;
+  font-weight: bold !important;
 }
-
-
-
-nav{
-	position: absolute;
-	left: 300px;
-	top: 5px;
-	z-index: -1;
-	height: 10px;
-}
-
 li a:hover {
   color: rgb(111,150,255);
+  transition: linear 0.25s color !important;
 }
-
+#btn{
+  width: 3.5vw;
+  min-width: 60px;
+  background-color: #5c65c0;
+  height: 50px;
+  cursor: pointer;
+  border: 0px;
+  padding-bottom: 5px;
+}
+#imgCidade{
+  max-height: 400px;
+  border-radius: 16px;
+  right: 60px;
+}
+li#CidadeInfo{
+  color:#b161f4;
+  font-size: 50px;
+  font-weight: bold;
+}
 #imgCidade{
   visibility: hidden;
+  border-radius: 16px;
 }
-
 #imgCidadeError,#populationError, #climaError, #eventoError{
   color: #b30000;
   display: inline;
 }
-
-
-#imgCidade{
-  height: 25%;
-  width: 25%;
+h1.grande{
+  color: #b161f4;
+  font-weight: bold !important;
+  text-align: center;
 }
+.balao{
+  border: 2px solid #b161f4;
+  border-radius: 30px;
+}
+.populationBox{
+  text-align: center;
+  color: rgb(255,255,255);  
+}
+.nomepop{
+  position: relative;
+  right: 0px;;
+  color: rgb(111,150,255);
+  font-weight: bold;
+}
+.climanome{
+  font-weight: bold;
+}
+.climalinha{
+  float: left;
+}
+.climaBox{
+  float: left;
+  border: 2px solid #b161f4;
+  border-radius: 30px;
+  text-align: center;
+}
+#imgClima{
+  visibility: hidden;
+}
+ul{
+  color: rgb(255,255,255);
+}
+#eventsList img{
+  position: relative;
+  left: 10%;
+}
+.eventoBox{
+  position: relative;
+  height: auto;
+}
+#IDLIEventos1,#IDLIEventos7, #IDLIEventos13 {
+  color:#6f96ff;
+  font-size: 25px;
+  position: absolute;
+}
+a.maiseventos{
+  font-size: 20px;
+  text-decoration: none;
+}
+a.maiseventos:hover {
+  color: #b161f4;
+}
+.maiseventos{
+  color: rgb(255,255,255);
+  font-weight: bold;
 
+}
+.titulolugar{
+  position: static;
+  margin-top: 60px;
+}
+#grande2{
+  text-align: center;
+  color: #b161f4;
+  font-weight: bold;
+}
 #txtPlaces{
   width: 250px;
 }
+.localBox{
+  position: relative;
+}
+.conteudo2{
+  margin-top: 15px;
+  position: absolute;
+  left: 100px;
+  float: right;
+  color: #5c65c0;
+}
+#txtPlaces::placeholder{
+  visibility: visible;
+  color: #6f96ff;
+}
+#btn{
+  background-color: #5c65c0;
 
+}
+#btn:hover{
+  background-color: #424994;
+}
+#IDLILugares0, #IDLILugares7, #IDLILugares14{
+  color:#6f96ff;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+a.sitelugar:hover{
+  color: #6f96ff;
+  font-weight: bold;
+}
+a.sitelugar{
+  color: #b161f4; 
+  font-weight: bold;
+  font-size: 20px;
+}
 hr.linha {
   border: 1px solid;
   color: #9fafc1;
-  top: 60px;
-  position: relative;
+}
+hr.linha2 {
+  border: 1px solid;
+  color: #9fafc1;
+}
+
+hr.linha3 {
+  border: 1px solid;
+  color: #9fafc1;
 }
 
 hr.linha4 {
   border: 1px solid;
   color: #9fafc1;
-  top: 700px;
-  position: relative;
+
 }
 
-footer{
-	position: absolute;
-	top: 730px;
-	left: 250px;
-	right: 250px;
+hr.linha5 {
+  border: 1px solid;
+  color: #9fafc1;
 }
-
 p.copia{
-	text-align: center; 
-	color: #9fafc1;
+  text-align: center; 
+  color: #9fafc1;
+}
+
+.conteudo2 input{
+  width: 55vw !important;
+  height: 50px;
+  position: relative;
+  bottom: 15px;
+  border: 1px solid;
+  color: #5c65c0;
+  background-color: rgb(21,21,21);
 }

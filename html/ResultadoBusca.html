@@ -2,13 +2,14 @@
 <meta charset="UTF-8">
 <html>
 	<head>
-		<link rel="stylesheet" href="../css/ResultadoBusca.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href='https://fonts.googleapis.com/css?family=MuseoModerno' rel='stylesheet'>
 		<link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="../img/icon.ico" />
 		<style>
 			h1.titulo{
-				font-family: 'MuseoModerno';font-size: 22px;
+				font-family: 'MuseoModerno';font-size: 22px; font-weight: bold;
 			}
 			h1.foco{
 				font-family: 'MuseoModerno';font-size: 110px;
@@ -17,58 +18,101 @@
 				font-family: 'Bai Jamjuree'
 			}
 		</style>
+		<link rel="stylesheet" href="../css/ResultadoBusca.css">
 		<title> Página Inicial </title>
-		<div class="nome">
-			<h1 class="titulo"> RETOUR </h1>
-		</div>
-	</head>
-	<nav>
-		<ul>
-			<li><a href="../index.html"> Página Inicial</a></li>
-			<li><a href="../html/Sobre.html"> Sobre Nós </a></li>
-		</ul>
-	</nav>
-	
-	
 	<body>
-		<div class = "imageBox">
-			<p id = "imgCidadeError"></p> <!-- Se der algum erro no carregamento da imagem, ele vai mostrar aqui, posiciona esse p em um lugar dahora ai junto com a imagem -->
-			<img id = "imgCidade" src = "">
+		<div class = "container">
+			<div class="nome">
+				<h1 class="titulo"> RETOUR </h1>
+			</div>
+			<nav id = "linav">
+				<ul>
+					<li><a href="../index.html"> Página Inicial</a></li>
+					<li><a href="../html/Sobre.html"> Sobre Nós </a></li>
+				</ul>
+			</nav>
 		</div>
-		<div class = "populationBox">
-			<p>Número de habitantes da cidade</p>
-			<p id = "populationError"></p>
-			<p id = "population"></p>
-		</div>
-		<div class = "climaBox">
-			<p>Clima:</p>
-			<p id = "climaError"></p>
-			<img id = "imgClima"></img>
-			<ul id = "climaList">
-			<ul>
-		</div>
-
-		<div class = "eventoBox">
-			<p>Lista de eventos</p>
-			<p id = "eventoError"></p>
-			<ul id = "eventsList">
-			</ul>
-		</div>
-
-		<div class = "localBox">
-			<p>Encontre lugares pela da cidade: </p>
-			<p id = "errorCampoPlace"></p>
-			<input type = "text" id = "txtPlaces" placeholder="Ex: (Restaurantes, Shoppings e Museus)"></input><button id = "btn" onclick="getPlaces()">Procurar</button>
-			<ul id = "placesList">
-			</ul>
-		</div>
-
 		<hr class="linha">
+
+		<div class = "container">
+			<div class = "row">
+				<div id = "INFOPesquisa" class = "col-md-5">
+					<ul id = "pesquisaList">
+					</ul>
+				</div>
+				<div class="imageBox col-md-7">
+					<p id = "imgCidadeError"></p> <!-- Se der algum erro no carregamento da imagem, ele vai mostrar aqui, posiciona esse p em um lugar dahora ai junto com a imagem -->
+					<img id = "imgCidade" class = "img-fluid" src = "">
+				</div>
+			</div>
+		</div>
+
+		<hr class="linha2">
+
+		<div class = "container">
+			<div class="informacoesgerais">
+				<h1 class="grande">INFORMAÇÕES GERAIS</h1>
+			</div>
+			<div class = "row">
+
+					<div class = "balao populationBox col-md-5">
+						<h2 class="nomepop">POPULAÇÃO</h2>
+						<p id = "populationError"></p>
+						<p id = "population"></p>
+					</div>
+					<div class = "col-md-2">
+						<br>
+						<br>
+					</div>
+					<div class = "climaBox col-md-5">
+						<h2 class="climanome">CLIMA</h2>
+						<p id = "climaError"></p>
+						<ul id = "climaList">
+						<ul>
+					</div>
+			</div>
+		</div>
+		<hr class="linha3">
+		<div class = "container">
+			<div class="tituloevento">
+				<h1 class="grande">EVENTOS NA CIDADE</h1>
+			</div>
+			<div class="conteudo row">
+				<div class = "eventoBox">
+					<p id = "eventoError"></p>
+					<ul id = "eventsList">
+					</ul>
+				</div>
+			</div>
+		</div>
 		<hr class="linha4">
+		<div class="titulolugar">
+			<h1 class="grande" id="grande2">LUGARES PARA SE VISITAR</h1>
+		</div>
+		<p id = "errorCampoPlace"></p>
+		<div class = "container">
+			<div class = "row" style = "position: relative;">
+				<div class="conteudo2">
+					<input type = "text" id ="txtPlaces" placeholder="Ex: (Restaurantes, Shoppings e Museus)"></input>
+				</div>
+				<div class="conteudo3" style="position: absolute; right: 10px;">	
+					<input type="image" src="../img/lupa.svg" id = "btn" value="Enviar" onclick="getPlaces()">
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class = "container">
+			<div class = "row">
+				<ul id = "placesList">
+				</ul>
+			</div>
+		</div>
+		<hr class="linha5">
+		<footer>
+			<p class="copia"> © Copyright 2022 </p>
+		</footer>
+	</div>
 		<script src = "../JavaScript/Busca.js"></script>
 	</body>
-	<footer>
-		<p class="copia"> © Copyright 2022 </p>
-	</footer>
-			
+
 </html>

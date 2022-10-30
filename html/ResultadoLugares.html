@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lugares</title>
-</head>
-<body>
-    <ul id = "ulPlacesID">
-    </ul>
-    <script src = "../JavaScript/Lugares.js"></script>
-</body>
+<meta charset="UTF-8">
+<html>
+	<head>
+        <html lang="pt-br"></html>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=MuseoModerno' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Bai Jamjuree' rel='stylesheet'>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/icon.ico"/>
+		<style>
+			h1.titulo{
+				font-family: 'MuseoModerno';font-size: 22px; font-weight: bold;
+			}
+			h1.foco{
+				font-family: 'MuseoModerno';font-size: 110px;
+			}
+			body{
+				font-family: 'Bai Jamjuree'
+			}
+		</style>
+		<link rel="stylesheet" href="../css/ResultadoLugares.css">
+		<title> Lugares </title>
+	</head>
+	<body>
+		<div class = "container">
+			<div class="nome">
+				<h1 class="titulo"> RETOUR </h1>
+			</div>
+			<nav id = "linav" style>
+				<ul>
+					<li><a href="../index.html"> Página Inicial</a></li>
+					<li><a href="../html/Sobre.html"> Sobre Nós </a></li>
+				</ul>
+			</nav>
+		</div>
+		<hr class="linha">
+		<br>
+		<div class = "container">
+			<div class = "row">
+				<div class="conteudo">
+					<ul id = "ulPlacesID">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr class="linha5">
+		<footer>
+			<p class="copia"> © Copyright 2022 </p>
+		</footer>
+		<script src = "../JavaScript/Lugares.js"></script>
+	</body>
 </html>
