@@ -5,6 +5,7 @@
 	left: 20%;
 	bottom: 35px;
 	width: 35vh;
+	min-width: 270px;
 }
 h1.titulo{
 	color: rgb(111,150,255);
