@@ -1,106 +1,340 @@
-#linav{
-	text-align: center;
-	position: relative;
-	top: -8px;
-	left: 20%;
-	bottom: 35px;
-	width: 35vh;
-	min-width: 270px;
+body {
+  background-color: rgb(21,21,21);
 }
+
 h1.titulo{
 	color: rgb(111,150,255);
 	font-size: 20px;
 	left: 10px;
 }
+
 .nome{
-	position: relative;
-	top: 25px;
-	left: 2.5%;
+	position: absolute;
+	left: 60px;
+	top: 0px;
+	z-index: -1;
 }
+
 ul{
-	list-style-type: none;
-	overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: rgb(255,255,255);
 }
+
 li{
-	float:left;
-	padding-left: 10%;
+  float:left;
 }
+
 li a {
-	text-decoration: none !important;
-	color: rgb(255,255,255);
-	font-weight: bold !important;
+  display: block;
+  text-align: center;
+  padding: 14px 110px;
+  text-decoration: none;
+  color: rgb(255,255,255);
+  font-weight: bold;
 }
+
+nav{
+	position: absolute;
+	left: 300px;
+	top: 8px;
+	height: 10px;
+}
+
 li a:hover {
-	color: rgb(111,150,255);
-	transition: linear 0.25s color !important;
+  color: rgb(111,150,255);
+  transition: linear 0.25s color;
 }
-.imagemfoco2{
-	border-radius: 16px;
-	width: 35%;
-	float: left;
-}
-#container2,#container3{
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
+
 hr.linha {
-	border: 1px solid;
-	color: #9fafc1;
-	position: relative;
+  border: 1px solid;
+  color: #9fafc1;
+  top: 60px;
+  position: relative;
 }
+
+@media screen and (min-width: 900px) and (max-width: 1600px) {
 hr.linha2 {
-	border: 1px solid;
-	color: #9fafc1;
+  border: 1px solid;
+  color: #9fafc1;
+  top: 550px;
+  position: relative;
 }
+
 hr.linha3 {
-	border: 1px solid;
-	color: #9fafc1;
-	position: relative;
+  border: 1px solid;
+  color: #9fafc1;
+  top: 850px;
+  position: relative;
 }
+
 hr.linha4 {
-	border: 1px solid;
-	color: #9fafc1;
-	position: relative;
+  border: 1px solid;
+  color: #9fafc1;
+  top: 1150px;
+  position: relative;
 }
+
 h1.frase{
 	color: #b161f4;
 	font-size: 50px;
-	font-weight: bold;
 }
+
+.esquerdainicial{
+	position: absolute;
+	top: 150px;
+	left: 90px;
+	width: 500px;
+}
+
 p.frase2{
 	color: #6f96ff;
 	font-size: 25px;
 }
+
+.direitainicial{
+	position: absolute;
+	top: 145px;
+	right: 150px;
+	width: 500px;
+	float: right;
+}
+
 .imagemfoco{
 	border-radius: 16px;
 	width: 110%;
 	float: left;
+	
 }
+
+.conteudo{
+	position: absolute;
+	top: 640px;
+	left: 110px;
+	right: 110px;
+}
+
 h3{
 	color: #b161f4;
 	font-size: 20px;
 	text-align: center;
-	font-weight: bold;
 }
+
 p.centro{
 	color: #ffffff;
 	text-align: center;
 }
-.conteudo{
-	text-align: center;
+
+.cont1{
+	position: relative;
+	width: 250px;
+	float: left;
+	left: 90px;
+}
+
+.cont2{
+	width: 250px;
+	float: left;
+	left: 550px;
+	position: absolute;
+	top: 0px;
+}
+
+.cont3{
+	width: 250px;
+	float: right;
+	position: relative;
+	right: 90px;
+}
+
+.conteudo2{
+	top: 980px;
+	position: absolute;
+	left: 120px;
+	right: 130px; 
+}
+.retour{
+	font-weight: bold;
+	position: absolute;
+	top: -74px;
+
 }
 
 .imagemfoco2{
 	border-radius: 16px;
+	width: 35%;
+	float: left;
+	
 }
+
 .explicacao{
-	position: relative;
+	position: absolute;
+	float: right;
+	right: 50px;
+	width: 800px;
+	left: 320px;
+	text-align: left;
+	top: 5px;
 	font-size: 22px;
 }
+
 .explica{
 	color: #ffffff;
 }
+
+footer{
+	position: absolute;
+	top: 1200px;
+	left: 250px;
+	right: 250px;
+}
+
 p.copia{
 	text-align: center; 
 	color: #9fafc1;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+hr.linha2 {
+  border: 1px solid;
+  color: #9fafc1;
+  top: 550px;
+  position: relative;
+}
+
+hr.linha3 {
+  border: 1px solid;
+  color: #9fafc1;
+  top: 850px;
+  position: relative;
+}
+
+hr.linha4 {
+  border: 1px solid;
+  color: #9fafc1;
+  top: 1150px;
+  position: relative;
+}
+
+h1.frase{
+	color: #b161f4;
+	font-size: 50px;
+}
+
+.esquerdainicial{
+	position: absolute;
+	top: 150px;
+	left: 90px;
+	width: 500px;
+}
+
+p.frase2{
+	color: #6f96ff;
+	font-size: 25px;
+}
+
+.direitainicial{
+	position: absolute;
+	top: 145px;
+	right: 150px;
+	width: 500px;
+	float: right;
+}
+
+.imagemfoco{
+	border-radius: 16px;
+	width: 110%;
+	float: left;
+	
+}
+
+.conteudo{
+	position: absolute;
+	top: 640px;
+	left: 110px;
+	right: 110px;
+}
+
+h3{
+	color: #b161f4;
+	font-size: 20px;
+	text-align: center;
+}
+
+p.centro{
+	color: #ffffff;
+	text-align: center;
+}
+
+.cont1{
+	position: relative;
+	width: 250px;
+	float: left;
+	left: 60px;
+}
+
+.cont2{
+	width: 250px;
+	float: left;
+	left: 438px;
+	position: absolute;
+	top: 0px;
+}
+
+.cont3{
+	width: 250px;
+	float: right;
+	position: relative;
+	right: 60px;
+}
+
+.conteudo2{
+	top: 980px;
+	position: absolute;
+	left: 120px;
+	right: 130px; 
+}
+.retour{
+	font-weight: bold;
+	position: absolute;
+	top: -74px;
+
+}
+
+.imagemfoco2{
+	border-radius: 16px;
+	width: 35%;
+	float: left;
+	
+}
+
+.explicacao{
+	position: absolute;
+	float: right;
+	right: 50px;
+	width: 800px;
+	left: 320px;
+	text-align: left;
+	top: 5px;
+	font-size: 22px;
+}
+
+.explica{
+	color: #ffffff;
+}
+
+footer{
+	position: absolute;
+	top: 1200px;
+	left: 250px;
+	right: 250px;
+}
+
+p.copia{
+	text-align: center; 
+	color: #9fafc1;
+}
 }
