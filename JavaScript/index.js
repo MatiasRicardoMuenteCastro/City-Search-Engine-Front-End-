@@ -21,7 +21,6 @@ async function requestSearch(){
     }
 
     if (formatacaoErro == false){
-        document.getElementById("error").style.visibility = "hidden"
         document.getElementById("userInput").style.color = "#5c65c0"
         document.getElementById("error").innerHTML = ""
         try{
@@ -51,7 +50,8 @@ async function requestSearch(){
     else{
         if (erroSTRUF !== ""){
             //Exibição do erro de formatação para o usuário
-            document.getElementById("error").style.visibility = "visible"
+            document.getElementById("userInput").style.color = "#5c65c0"
+            document.getElementById("opc").style.color = "black"
             document.getElementById("error").innerHTML = erroSTRUF
         }
         else if(erroSTRCidade !== ""){

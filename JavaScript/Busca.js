@@ -2,10 +2,6 @@ UF = localStorage.getItem("UF")
 Cod_Municipio = localStorage.getItem("Cod_Municipio")
 cidade = localStorage.getItem("Municipio")
 
-if(UF === null || Cod_Municipio === null || cidade === null){
-    window.location.replace("../index.html")
-}
-
 urlapi = "https://retour-api.herokuapp.com"
 //urlapi = "http://localhost:5000"
 
@@ -43,7 +39,7 @@ async function getPopulation(){
             document.getElementById("populationError").innerHTML = population.error
         }
         else{
-            document.getElementById("population").innerHTML = population.success.toLocaleString('pt-BR')
+            document.getElementById("population").innerHTML = population.success
         }
     }catch(error){
         document.getElementById("populationError").innerHTML = "Erro no carregamento da rota"
@@ -63,6 +59,7 @@ async function getWeather(){
         else{
                 forecast = weather.forecast
                 thumbnail = weather.thumbnail
+                document.getElementById("imgClima").src = thumbnail
                 arrayWeather = [weather.date,weather.humidity, weather.temperature,weather.unit,weather.weather,weather.wind]
                 arrayWeatherLabel = ["Data: ","Humidade: ","Temperatura: ","Tipo de medida: ","Previsão do tempo: ","Velocidade das núvens: "]
                 count = 0
@@ -90,33 +87,24 @@ async function getEvent(){
             mais_eventos = events.Mais_Eventos
             countID = 0
             for (i of events.Eventos){
-                if(i.thumbnail !== undefined){
-                    document.getElementById("eventsList").innerHTML += `<img class = "imgEvento" id = "imgEvento${countID}" src = ${i.thumbnail} alt = "Imagem do Evento">`
-                }
+                document.getElementById("eventsList").innerHTML += `<img class = "imgEvento" id = "imgEvento${countID}" src = ${i.thumbnail} alt = "Imagem do Evento">`
                 countID = countID+1
-                if(i.title !== undefined){
-                    document.getElementById("eventsList").innerHTML += `<li class = "classeLIEventos" id = "IDLIEventos${countID}"> <b>${i.title}</b></li><br><br><br><br><br>`
-                }
+                document.getElementById("eventsList").innerHTML += `<li class = "classeLIEventos" id = "IDLIEventos${countID}"> ${i.title}</li><br>`
                 countID = countID+1
-                if(i.date.start_date !== undefined){
-                    document.getElementById("eventsList").innerHTML += `<br><li class = "classeLIEventos" id = "IDLIEventos${countID}">Data de inicio: ${i.date.start_date}</li><br>`
-                }
+                document.getElementById("eventsList").innerHTML += `<br><li class = "classeLIEventos" id = "IDLIEventos${countID}">Data de inicio: ${i.date.start_date}</li><br>`
                 countID = countID+1
-                if(i.date.when !== undefined){
-                    document.getElementById("eventsList").innerHTML += `<li class = "classeLIEventos" id = "IDLIEventos${countID}">Quando?<br> ${i.date.when}</li><br><br>`
-                }
+                document.getElementById("eventsList").innerHTML += `<li class = "classeLIEventos" id = "IDLIEventos${countID}">Quando?<br> ${i.date.when}</li><br><br>`
                 countID = countID+1
                 let [Endereco, Cidade] = i.address
-                document.getElementById("eventsList").innerHTML += `<li class = "classeLIEventos" id = "IDLIEventos${countID}">Endereço: ${Endereco}, ${Cidade}</li><br>`
+                document.getElementById("eventsList").innerHTML += `<li class = "classeLIEventos" id = "IDLIEventos${countID}">Endereço: ${Endereco}, Cidade: ${Cidade}</li><br>`
                 countID = countID+1
-                if(i.link !== undefined){
-                    document.getElementById("eventsList").innerHTML += `<li class = "classeLIEventos" id = "IDLIEventos${countID}"><a href = ${i.link} target = "__blank"> Link do evento</a></li><br><br>`
-                }
+
+                document.getElementById("eventsList").innerHTML += `<li class = "classeLIEventos" id = "IDLIEventos${countID}"><a href = ${i.link} target = "__blank"> Link do evento</a></li><br>`
                 countID = countID+1
                 document.getElementById("eventsList").innerHTML += "<br><br>"
 
             }
-            document.getElementById("eventsList").innerHTML += `<br><a class = "maiseventos" href = ${mais_eventos} target = __blank> MAIS EVENTOS </li><br>`
+            document.getElementById("eventsList").innerHTML += `<a class = "maiseventos" href = ${mais_eventos} target = __blank> MAIS EVENTOS </li><br>`
         }
     }catch(error){
         document.getElementById("eventoError").innerHTML = "Erro no carregamento da rota"
@@ -159,36 +147,23 @@ async function getPlaces(){
                 countID = 0
                 for(let count = 0; count < 3; count++){
                     let place = places[count]
-                    if(place.title !== undefined){
-                        document.getElementById("placesList").innerHTML += `<br><br><li class = "classeLILugares" id = "IDLILugares${countID}"><b>${place.title}</b></li><br>`
-                    }
+
+                    document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">${place.title}</li><br>`
                     countID = countID+1
-                    if(place.address !== undefined){
-                        document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Rua: ${place.address}</li><br>`
-                    }
+                    document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Rua: ${place.address}</li><br>`
                     countID = countID+1
-                    if(place.description !== undefined){
-                        document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Descrição: ${place.description}</li><br>`
-                    }
+                    document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Descrição: ${place.description}</li><br>`
                     countID = countID+1
-                    if(place.open_state !== undefined){
-                        document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Está aberto? ${place.open_state}</li><br>`
-                    }
+                    document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Está aberto? ${place.open_state}</li><br>`
                     countID = countID+1
-                    if(place.phone !== undefined){
-                        document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Telefone: ${place.phone}</li><br>`
-                    }
+                    document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Telefone: ${place.phone}</li><br>`
                     countID = countID+1
-                    if(place.rating !== undefined){
-                        document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Avaliação: ${place.rating}</li><br><br><br>`
-                    }
+                    document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}">Avaliação: ${place.rating}</li><br><br><br>`
                     countID = countID+1
-                    if(place.website !== undefined){
-                        document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}"><a class="sitelugar" href = "${place.website}" target = "__blank">Site do lugar</a></li><br><br>`
-                    }
+                    document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}"><a class="sitelugar" href = "${place.website}" target = "__blank">Site do lugar</a></li><br><br><br>`
                     countID = countID+1                    
                 }
-                document.getElementById("placesList").innerHTML += `<br><br><li><a class = "maiseventos" href = "../html/ResultadoLugares.html">Ver mais</a></li>`
+                document.getElementById("placesList").innerHTML += `<a class = "maiseventos" href = "../html/ResultadoLugares.html">Ver mais</a>`
                 localStorage.setItem("places",JSON.stringify(places))
             }
         }catch(error){
