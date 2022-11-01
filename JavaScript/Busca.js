@@ -59,7 +59,6 @@ async function getWeather(){
         else{
                 forecast = weather.forecast
                 thumbnail = weather.thumbnail
-                document.getElementById("imgClima").src = thumbnail
                 arrayWeather = [weather.date,weather.humidity,weather.location, weather.temperature,weather.unit,weather.weather,weather.wind]
                 arrayWeatherLabel = ["Data: ","Humidade: ","Lugar: ","Temperatura: ","Tipo de medida: ","Previsão do tempo: ","Velocidade das núvens: "]
                 count = 0
