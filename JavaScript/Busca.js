@@ -60,12 +60,12 @@ async function getWeather(){
                 forecast = weather.forecast
                 thumbnail = weather.thumbnail
                 document.getElementById("imgClima").src = thumbnail
-                arrayWeather = [weather.date,weather.humidity, weather.temperature,weather.unit,weather.weather,weather.wind]
-                arrayWeatherLabel = ["Data: ","Humidade: ","Temperatura: ","Tipo de medida: ","Previsão do tempo: ","Velocidade das núvens: "]
+                arrayWeather = [weather.date,weather.humidity,weather.location, weather.temperature,weather.unit,weather.weather,weather.wind]
+                arrayWeatherLabel = ["Data: ","Humidade: ","Lugar: ","Temperatura: ","Tipo de medida: ","Previsão do tempo: ","Velocidade das núvens: "]
                 count = 0
                 for (i of arrayWeather){
                         nomeClima = arrayWeatherLabel[count]
-                        document.getElementById("climaList").innerHTML += `<li class="climalinha">${nomeClima}${i}</li><br>`
+                        document.getElementById("climaList").innerHTML += `<li>${nomeClima}${i}</li><br>`
                         count = count+1
                     }
                 }
