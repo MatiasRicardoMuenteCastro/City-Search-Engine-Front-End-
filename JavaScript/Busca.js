@@ -70,6 +70,7 @@ async function getWeather(){
                     }
                 }
     }catch(error){
+        console.log(error)
         document.getElementById("climaError").innerHTML = "Erro no carregamento da rota"
     }
 }
