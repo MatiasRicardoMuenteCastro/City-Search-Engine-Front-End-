@@ -39,7 +39,7 @@ async function getPopulation(){
             document.getElementById("populationError").innerHTML = population.error
         }
         else{
-            document.getElementById("population").innerHTML = population.success
+            document.getElementById("population").innerHTML = population.success.toLocaleString('pt-BR')
         }
     }catch(error){
         document.getElementById("populationError").innerHTML = "Erro no carregamento da rota"
