@@ -112,22 +112,10 @@ input {
 }
 
 #error{
-	color: white;
-	height: 60px;
-	width: 250px;
-	background-color: #5c65c0;
-	justify-content: center;
-	text-align: center;
-	position: fixed;
-	visibility: hidden;
-	border: 0px;
-	animation: animacao 5s;
-    	animation-fill-mode: forwards; 
-}
-
-@keyframes animacao {         
-	0%   {top: 0px;}
-	100%  {top: 120px; visibility:hidden;
+    position: absolute;
+    bottom: 60px;
+    color: #6f96ff;
+    display: inline;
 }
 
 input[type=text] {
