@@ -5,8 +5,7 @@ cidade = localStorage.getItem("Municipio")
 urlapi = "https://retour-api.herokuapp.com"
 //urlapi = "http://localhost:5000"
 
-document.getElementById("pesquisaList").innerHTML += `<li id = "CidadeInfo"> ${cidade} - ${UF} </li>`
-
+document.getElementById("pesquisaList").innerHTML += `<li id = "CidadeInfo"> ${cidade} - ${UF}</li><br>`
 
 async function imageShow(){
     try{
@@ -39,7 +38,7 @@ async function getPopulation(){
             document.getElementById("populationError").innerHTML = population.error
         }
         else{
-            document.getElementById("population").innerHTML = population.success.toLocaleString('pt-BR')
+            document.getElementById("population").innerHTML = population.success
         }
     }catch(error){
         document.getElementById("populationError").innerHTML = "Erro no carregamento da rota"
@@ -59,17 +58,16 @@ async function getWeather(){
         else{
                 forecast = weather.forecast
                 thumbnail = weather.thumbnail
-                arrayWeather = [weather.date,weather.humidity,weather.location, weather.temperature,weather.unit,weather.weather,weather.wind]
-                arrayWeatherLabel = ["Data: ","Humidade: ","Lugar: ","Temperatura: ","Tipo de medida: ","Previsão do tempo: ","Velocidade das núvens: "]
+                arrayWeather = [weather.date,weather.humidity, weather.temperature,weather.unit,weather.weather,weather.wind]
+                arrayWeatherLabel = ["Data: ","Humidade: ","Temperatura: ","Tipo de medida: ","Previsão do tempo: ","Velocidade das núvens: "]
                 count = 0
                 for (i of arrayWeather){
                         nomeClima = arrayWeatherLabel[count]
-                        document.getElementById("climaList").innerHTML += `<li>${nomeClima}${i}</li><br>`
+                        document.getElementById("climaList").innerHTML += `<li class="climalinha">${nomeClima}${i}</li><br>`
                         count = count+1
                     }
                 }
     }catch(error){
-        console.log(error)
         document.getElementById("climaError").innerHTML = "Erro no carregamento da rota"
     }
 }
@@ -163,7 +161,7 @@ async function getPlaces(){
                     document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}"><a class="sitelugar" href = "${place.website}" target = "__blank">Site do lugar</a></li><br><br><br>`
                     countID = countID+1                    
                 }
-                document.getElementById("placesList").innerHTML += `<a class = "maiseventos" href = "../html/ResultadoLugares.html">Ver mais</a>`
+                document.getElementById("placesList").innerHTML += `<a class = "maislugares" href = "../html/ResultadoLugares.html" target="_blank">VER MAIS</a>`
                 localStorage.setItem("places",JSON.stringify(places))
             }
         }catch(error){

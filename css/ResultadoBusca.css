@@ -11,11 +11,16 @@ h1.titulo{
 	left: 10px;
 }
 
+a#titulo{
+  text-decoration: none;
+  color: rgb(111,150,255);
+	font-size: 20px;
+}
+
 .nome{
 	position: absolute;
 	left: 60px;
 	top: 0px;
-	z-index: -1;
 }
 
 ul{
@@ -45,9 +50,24 @@ nav{
 
 li a:hover {
   color: rgb(111,150,255);
-
+  transition: linear 0.25s color;
 }
 
+#imgCidadeError, #eventoError{
+  color: #6f96ff;
+  display: inline;
+  margin-left: 100px;
+  font-weight: bold;
+}
+#populationError, #climaError{
+  color: #b161f4;
+  display: inline;
+  margin-left: 0px;
+  font-weight: bold;
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1600px){
 #INFOPesquisa{
   position: relative;
   left: 90px;
@@ -57,13 +77,8 @@ li a:hover {
 
 #CidadeInfo{
   position: absolute;
-  top: 140px;
+  top: 200px;
   float:left;
-}
-
-pesquisaList{
-  width: 500px;
-  height: 500px;
 }
 
 li#CidadeInfo{
@@ -74,8 +89,9 @@ li#CidadeInfo{
 
 #UFINFO{
   position: absolute;
-  top: 350px;
+  top: 290px;
   float:left;
+  margin-top: 20px;
 }
 
 li#UFINFO{
@@ -96,12 +112,6 @@ li#UFINFO{
   visibility: hidden;
   border-radius: 16px;
 }
-
-#imgCidadeError,#populationError, #climaError, #eventoError{
-  color: #b30000;
-  display: inline;
-}
-
 
 #imgCidade{
   max-width: 600px;
@@ -129,11 +139,15 @@ h1.grande{
   position: absolute;
   top: 542px; 
   float: right;
-  width: 350px;
-  height: 220px;
+  width: 360px;
+  height: 240px;
   margin: 150px;
-  left: 780px;
+  left: 760px;
 
+}
+
+#population{
+  font-size: 25px;
 }
 
 .populationBox{
@@ -166,6 +180,8 @@ h1.grande{
   left: 250px;
   border: 2px solid #b161f4;
   border-radius: 30px;
+  padding-right: 80px;
+  padding-bottom: 10px;
 }
 
 #imgClima{
@@ -177,6 +193,7 @@ h1.grande{
   margin-top: -5px;
   float: left;
   left: 0px;
+  font-size: 20px;
 }
 
 ul{
@@ -186,8 +203,8 @@ ul{
 .conteudo{
   top: 1050px; 
   width: 100%;
-  height: auto;
-  position: relative;
+  height: 100%;
+  position: absolute;
 }
 
 .eventoBox{
@@ -197,7 +214,7 @@ ul{
 
 .tituloevento{
   margin-left:615px;
-  position: relative;
+  position: static;
 }
 
 .imgEvento{
@@ -291,6 +308,365 @@ input[type=text] {
 
 .conteudo3{
 	position: relative;
+	right: 178px;
+	float: right;
+	width: 70px;
+  margin-top: 15px;
+}
+
+#btn{
+	width: 70px;
+	background-color: #5c65c0;
+	height: 48px;
+	cursor: pointer;
+	border: 0px;
+  padding-bottom: 5px;
+}
+
+#btn:hover{
+  transition: linear 0.25s background-color;
+	background-color: #515ab8b6;
+
+}
+
+.classeLILugares{
+  position: relative;
+  top:90px;
+  margin-left: 0px;
+}
+
+#IDLILugares0, #IDLILugares7, #IDLILugares14{
+  color:#6f96ff;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#IDLILugares6, #IDLILugares13, #IDLILugares20{
+  float: left;
+  position: relative;
+  top: 50px;
+  margin-left: -110px;
+}
+
+a.sitelugar:hover{
+  color: #6f96ff;
+  font-weight: bold;
+}
+
+a.sitelugar{
+  color: #b161f4; 
+  font-weight: bold;
+  font-size: 20px;
+}
+
+a.maislugares{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.maislugares:hover {
+  color: #b161f4;
+
+}
+
+.maislugares{
+  position: relative;
+  left: 710px;
+  color: rgb(255,255,255);
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+hr.linha {
+  border: 1px solid;
+  color: #9fafc1;
+  top: 60px;
+  position: relative;
+}
+
+hr.linha2 {
+  border: 1px solid;
+  color: #9fafc1;
+  top: 490px;
+  position: relative;
+}
+
+hr.linha3 {
+  border: 1px solid;
+  color: #9fafc1;
+  top:940px;
+  position: relative;
+}
+
+hr.linha4 {
+  border: 1px solid;
+  color: #9fafc1;
+  position: relative;
+  top: 20px;
+
+}
+
+hr.linha5 {
+  border: 1px solid;
+  color: #9fafc1;
+  position: relative;
+  margin-top: 30px;
+}
+
+footer{
+	position: relative;
+	right: 250px;
+  left: 0px;
+  margin-top: 20px;
+}
+
+p.copia{
+	text-align: center; 
+	color: #9fafc1;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px){
+#INFOPesquisa{
+  position: relative;
+  left: 90px;
+  right: 400px;
+  width: 550px;
+}
+
+#CidadeInfo{
+  position: absolute;
+  top: 160px;
+  float:left;
+}
+
+li#CidadeInfo{
+  color:#b161f4;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+#UFINFO{
+  position: absolute;
+  float: left;
+  margin-top: 90px;
+  color:#6f96ff;
+}
+
+li#UFINFO{
+  color: rgb(111,150,255);
+  font-size: 30px;
+}
+
+.imageBox{
+  position: absolute;
+  width: 500px;
+  margin-top: 70px;
+	float: right;
+  left: 600px; 
+  right: 150px;
+}
+
+#imgCidade{
+  visibility: hidden;
+  border-radius: 16px;
+}
+
+#imgCidade{
+  max-width: 600px;
+  max-height: 350px;
+  border-radius: 16px;
+  right: 60px;
+}
+
+.informacoesgerais{
+  position: absolute;
+  top: 570px; 
+  left:510px; 
+  right: 450px;
+  
+}
+
+h1.grande{
+  color: #b161f4;
+  font-weight: bold;
+}
+
+.balao{
+  border: 2px solid #b161f4;
+  border-radius: 30px;
+  position: absolute;
+  top: 545px; 
+  float: right;
+  width: 350px;
+  height: 220px;
+  margin: 150px;
+  left: 660px;
+
+}
+
+.populationBox{
+  position: relative;
+  left:83px;
+  text-align: center;
+  width: 50%;
+  color: rgb(255,255,255);  
+}
+
+.nomepop{
+  position: relative;
+  right: 0px;;
+  color: rgb(111,150,255);
+
+}
+
+.climanome{
+  position: relative;
+  left: 135px;
+}
+
+.climalinha{
+  width: 350px;
+  float: left;
+  position: relative;
+  margin-top: 0px;
+}
+
+.climaBox{
+  position: absolute;
+  top: 680px; 
+  float: left;
+  left: 210px;
+  width: 410px;
+  height: 270px;
+  border: 2px solid #b161f4;
+  border-radius: 30px;
+}
+
+#imgClima{
+  visibility: hidden;
+}
+
+#climaList{
+  position: relative;
+  margin-right: 10px;
+  margin-top: 10px;
+  float: left;
+  left: 0px;
+}
+
+ul{
+  color: rgb(255,255,255);
+}
+
+.conteudo{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.eventoBox{
+  position: relative;
+  height: auto;
+}
+
+.tituloevento{
+  margin-left:520px;
+  position: static;
+  margin-top: 15px;
+}
+
+.imgEvento{
+  position: absolute;
+  float: left;
+  width: 8.5%;
+}
+
+.classeLIEventos{
+  position: absolute;
+  float: right;
+  left: 165px;
+}
+
+#IDLIEventos5,#IDLIEventos11, #IDLIEventos17 {
+  float: left;
+  left:-110px;
+  position: relative;
+  top:2px;
+}
+
+#IDLIEventos1,#IDLIEventos7, #IDLIEventos13 {
+  color:#6f96ff;
+  font-size: 25px;
+  position: absolute;
+}
+
+a.maiseventos{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.maiseventos:hover {
+  color: #b161f4;
+
+}
+
+.maiseventos{
+  position: relative;
+  left: 555px;
+  color: rgb(255,255,255);
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.titulolugar{
+  position: static;
+  margin-top: 60px;
+}
+
+#grande2{
+  text-align: center;
+  color: #b161f4;
+  font-weight: bold;
+}
+
+#txtPlaces{
+  width: 250px;
+}
+
+.localBox{
+  position: relative;
+
+}
+
+input {
+  width: 100%;
+  color: #6f96ff;
+  background-color: rgb(21,21,21);
+}
+
+.conteudo2{
+  margin-top: 15px;
+	position: absolute;
+	left: 100px;
+	float: right;
+  color: #5c65c0;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 18px 383px;
+  border: 1px solid;
+  color: #5c65c0;
+}
+
+#txtPlaces::placeholder{
+  visibility: visible;
+  color: #6f96ff;
+}
+
+.conteudo3{
+	position: relative;
 	right: 162px;
 	float: right;
 	width: 70px;
@@ -342,6 +718,24 @@ a.sitelugar{
   font-size: 20px;
 }
 
+a.maislugares{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.maislugares:hover {
+  color: #b161f4;
+
+}
+
+.maislugares{
+  position: relative;
+  left: 575px;
+  color: rgb(255,255,255);
+  font-weight: bold;
+  margin-top: 25px;
+}
+
 hr.linha {
   border: 1px solid;
   color: #9fafc1;
@@ -368,7 +762,6 @@ hr.linha4 {
   color: #9fafc1;
   position: relative;
   top: 20px;
-
 }
 
 hr.linha5 {
@@ -388,4 +781,5 @@ footer{
 p.copia{
 	text-align: center; 
 	color: #9fafc1;
+}
 }

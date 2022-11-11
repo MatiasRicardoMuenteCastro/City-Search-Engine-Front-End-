@@ -10,6 +10,12 @@ body {
       font-size: 20px;
       left: 10px;
   }
+
+  a#titulo{
+    text-decoration: none;
+    color: rgb(111,150,255);
+    font-size: 20px;
+  }
   
   .nome{
       position: absolute;

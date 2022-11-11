@@ -5,12 +5,24 @@ body {
   margin: 0;
 }
 
+#error{
+	position: absolute;
+	bottom: 60px;
+	color: #6f96ff;
+	display: inline;
+}
+
 h1.titulo{
 	color: rgb(111,150,255);
 	font-size: 20px;
 	left: 10px;
 }
 
+a{
+	text-decoration: none;
+	color: #6f96ff;
+	font-size: 20px;
+}
 .nome{
 	position: absolute;
 	left: 60px;
@@ -40,7 +52,6 @@ nav{
 	position: absolute;
 	left: 300px;
 	top: 5px;
-	z-index: -1;
 	height: 10px;
 	background-color: rgb(21,21,21);
 }
@@ -55,9 +66,9 @@ hr.linha {
   color: #9fafc1;
   top: 60px;
   position: relative;
-
 }
 
+@media screen and (min-width: 900px) and (max-width: 1600px) {
 .conteudo{
 	position: relative;
 	top: 5px;
@@ -86,7 +97,7 @@ input {
 .cont1{
 	position: relative;
 	top: 390px;
-	left: 140px;
+	left: 650px;
 	float: left;
 }
 
@@ -105,17 +116,10 @@ input {
 
 .cont2{
 	position: absolute;
-	top: 383px;
-	left: 340px;
+	top: 453px;
+	left: 300px;
 	float: right;
 	text-align: left;
-}
-
-#error{
-    position: absolute;
-    bottom: 60px;
-    color: #6f96ff;
-    display: inline;
 }
 
 input[type=text] {
@@ -134,8 +138,8 @@ input[type=text] {
 
 .cont3{
 	position: relative;
-	top: 391px;
-	right: 240px;
+	top: 461px;
+	right: 298px;
 	float: right;
 	width: 70px;
 }
@@ -154,7 +158,7 @@ input[type=text] {
 	background-color: #515ab8b6;
 }
 .explica{
-	top: 480px;
+	top: 540px;
 	position: absolute;
 	left: 350px;
 	font-size: 30px;
@@ -162,7 +166,7 @@ input[type=text] {
 
 .explicacao{
 	color: #ffffff;
-	top: 550px;
+	top: 600px;
 	left: 300px;
 	position: absolute;
 	font-size: 17px;
@@ -187,4 +191,132 @@ p.copia{
 	color: #9fafc1;
 	left: 250px;
 	right: 250px;
+}
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+.conteudo{
+	position: relative;
+	top: 5px;
+}
+
+.retour{
+	position: absolute;
+	top: 130px;
+	left: 460px;
+	right:500px;
+	
+}
+
+h1.foco{
+	color: #6f96ff;
+	text-align: center;
+	font-weight: 100px bold;
+}
+
+input {
+  width: 100%;
+  color: #6f96ff;
+  background-color: rgb(21,21,21);
+}
+
+.cont1{
+	position: relative;
+	top: 390px;
+	left: 130px;
+	float: left;
+}
+
+.opcoes{
+	background-color: #5c65c0;
+	color: #ffffff;
+	padding: 20px 30px;
+	text-align: left;
+	font-family: 'Bai Jamjuree';
+}
+
+.opcoes:hover{
+	transition: linear 0.25s background-color;
+	background-color: #515ab8b6;
+}
+
+.cont2{
+	position: absolute;
+	top: 383px;
+	left: 330px;
+	float: right;
+	text-align: left;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 20px 162px;
+  margin: 8px 0;
+  border: 1px solid;
+  color: #5c65c0;
+  text-align: left;
+}
+
+ ::placeholder,::-webkit-input-placeholder {
+    color: #6f96ff;
+	text-align: left;
+  }
+
+.cont3{
+	position: relative;
+	top: 391px;
+	right: 130px;
+	float: right;
+	width: 70px;
+}
+
+.botao{
+	width: 70px;
+	background-color: #5c65c0;
+	height: 47.5px;
+	cursor: pointer;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 0px;
+}
+.botao:hover{
+	transition: linear 0.25s background-color;
+	background-color: #515ab8b6;
+}
+.explica{
+	top: 480px;
+	position: absolute;
+	left: 280px;
+	font-size: 30px;
+}
+
+.explicacao{
+	color: #ffffff;
+	top: 550px;
+	left: 220px;
+	position: absolute;
+	font-size: 17px;
+}
+
+hr.linha2 {
+  border: 1px solid;
+  color: #9fafc1;
+  position: relative;
+}
+
+footer{
+	position: absolute;
+	top: 750px;
+	left: 0px;
+	right: 0px;
+
+}
+
+p.copia{
+	text-align: center; 
+	color: #9fafc1;
+	left: 250px;
+	right: 250px;
+}
 }
