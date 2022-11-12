@@ -9,7 +9,7 @@ document.getElementById("pesquisaList").innerHTML += `<li id = "CidadeInfo"> ${c
 
 async function imageShow(){
     try{
-        const response =  await fetch(`${urlapi}/city-image/${cidade}`,{
+        const response =  await fetch(`${urlapi}/city-image/${cidade}/${UF}`,{
             method: "GET"
         })
 
