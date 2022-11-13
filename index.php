@@ -1,1 +1,9 @@
-<?php include("index.html")>
+<?php 
+
+$routes = [];
+
+route('/',function(){
+    include("index.html")  
+})
+
+>
