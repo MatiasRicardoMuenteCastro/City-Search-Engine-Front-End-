@@ -103,7 +103,7 @@ async function getEvent(){
                 document.getElementById("eventsList").innerHTML += "<br><br>"
 
             }
-            document.getElementById("eventsList").innerHTML += `<a class = "maiseventos" href = ${mais_eventos} target = __blank> MAIS EVENTOS </li><br>`
+            document.getElementById("eventsList").innerHTML += `<a class = "maiseventos" href = ${mais_eventos} target = "__blank"> MAIS EVENTOS </li><br>`
         }
     }catch(error){
         document.getElementById("eventoError").innerHTML = "Erro no carregamento da rota"
@@ -162,7 +162,7 @@ async function getPlaces(){
                     document.getElementById("placesList").innerHTML += `<li class = "classeLILugares" id = "IDLILugares${countID}"><a class="sitelugar" href = "${place.website}" target = "__blank">Site do lugar</a></li><br><br><br>`
                     countID = countID+1                    
                 }
-                document.getElementById("placesList").innerHTML += `<a class = "maislugares" href = "../html/ResultadoLugares.html" target="_blank">VER MAIS</a>`
+                document.getElementById("placesList").innerHTML += `<a class = "maislugares" href = "../html/ResultadoLugares.html">VER MAIS</a>`
                 localStorage.setItem("places",JSON.stringify(places))
             }
         }catch(error){
